@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- END CSS -->
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;900&display=swap" rel="stylesheet">
+    <!-- END FONTS -->
+
+</head>
+
+<body>
+    <div class="circle" id="circle"></div>
+
+    <img src="./assets/logo.png" alt="logo do Starbucks" class="logo">
+
+    <div class="conteudo-principal">
+        <div class="caixa-texto">
+            <h2>
+                It's not just Coffe <br>
+                It's <span>Starbucks</span>
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Ducimus molestiae incidunt quis at fugit, vitae hic!
+                Cumque mollitia alias, blanditiis a obcaecati unde explicabo
+                incidunt, aperiam sunt iusto neque accusamus!
+            </p>
+            <button>Learn More</button>
+        </div>
+
+        <div class="caixa-imagem">
+            <img id="imagem-principal" src="./assets/img1.png" alt="" class="starbucks">
+        </div>
+    </div>
+
+    <div class="menu">
+        <img id="menu-1" src="./assets/thumb1.png" alt="" class="botaoMenu"
+            onclick="mudarMenu('./assets/img1.png'); mudarCor('#017143')">
+        <img id="menu-2" src="./assets/thumb2.png" alt="" class="botaoMenu"
+            onclick="mudarMenu('./assets/img2.png'); mudarCor('#eb7495')">
+        <img id="menu-3" src="./assets/thumb3.png" alt="" class="botaoMenu"
+            onclick="mudarMenu('./assets/img3.png'); mudarCor('#d752b1')">
+    </div>
+
+    <script>
+        let imgPrincipal = document.getElementById("imagem-principal")
+        let circle = document.getElementById("circle")
+
+        function mudarMenu(endereco) {
+            imgPrincipal.src = endereco
+        }
+
+        function mudarCor(cor) {
+            circle.style.backgroundColor = cor;
+        }
+
+    </script>
+
+</body>
+
+</html>
